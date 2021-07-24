@@ -1,8 +1,8 @@
 # weather_in
 
-## What is weather.in?
+## What is weather_in?
 
-weather.in is a simple script for terminal use.  It utilizes the <a href = "https://openweathermap.org/current">Open Weather Map API</a> to provide quick, relevant and basic information regarding a specified locale's weather.
+weather_in is a simple script for terminal use.  It utilizes the <a href = "https://openweathermap.org/current">Open Weather Map API</a> to provide quick, relevant and basic information regarding a specified locale's weather.
 
 ## System Requirements
 
@@ -10,12 +10,12 @@ weather.in is a simple script for terminal use.  It utilizes the <a href = "http
 
 ## Installation
 
-pip3 install git+https://github.com/fleetyeets/weather.in
+pip3 install git+https://github.com/fleetyeets/weather_in
 
 ## Usage
 
-To use weather.in:
+To use weather_in:
 
-weather.in City State
+weather_in City State
 
 *note: State should not be abbreviated*
