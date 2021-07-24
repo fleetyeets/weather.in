@@ -20,10 +20,7 @@ setup(
     description='OpenWeather CLI script',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    install_requires=[
-        'requests',
-        'json'
-    ],
+    url = 'https://github.com/fleetyeets/weather.in',
     project_urls={  # Optional
         'Bug Reports': 'https://github.com/fleetyeets/weather.in/issues',
         'Source': 'https://github.com/fleetyeets/weather.in',
@@ -33,5 +30,5 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent'
-    ]
+    ],
 )
