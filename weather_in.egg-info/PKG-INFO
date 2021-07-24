@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: weather-in
-Version: 0.0.5
+Version: 0.0.7
 Summary: OpenWeather CLI script
 Home-page: https://github.com/fleetyeets/weather.in
 Author: Travis Pawlikowski
@@ -29,7 +29,7 @@ weather_in is a simple script for terminal use.  It utilizes the <a href = "http
 
 ## Installation
 
-pip3 install git+https://github.com/fleetyeets/weather_in
+pip install weather_in
 
 ## Usage
 
