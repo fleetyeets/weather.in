@@ -31,7 +31,5 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent'
     ],
-    entry_points = {'console_scripts':
-
-['weather_in=weather_in:.__main__:main'],},
+    scripts = ['bin/weather_in']
 )

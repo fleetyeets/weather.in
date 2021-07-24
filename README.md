@@ -10,7 +10,7 @@ weather_in is a simple script for terminal use.  It utilizes the <a href = "http
 
 ## Installation
 
-pip3 install git+https://github.com/fleetyeets/weather_in
+pip install weather_in
 
 ## Usage
 

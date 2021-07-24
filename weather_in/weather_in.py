@@ -26,5 +26,3 @@ def main(City State):
        print("The API expects City State passed as arguments.  Example: Pasadena California (note: CA will not work)")
     except:
        print("Whoops, I'm not sure what happened here.  Good luck!")
-if __name__ == "__main__":
-    sys.exit(main())
