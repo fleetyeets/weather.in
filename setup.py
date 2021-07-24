@@ -33,5 +33,5 @@ setup(
     ],
     entry_points = {'console_scripts':
 
-['weather_in=weather_in'],},
+['weather_in=weather_in:main'],},
 )
