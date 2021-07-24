@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
 from setuptools import setup, find_packages
@@ -13,7 +13,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='weather_in',
     version=weather_in.__version__,
-    packages=find_packages(where='weather_in'),
+    packages=find_packages(),
     python_requires='>=3.0',
     author='Travis Pawlikowski',
     author_email='tnp123@protonmail.com',
@@ -31,5 +31,7 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent'
     ],
-    scripts = ['weather_in/weather_in.py']
+    entry_points = {'console_scripts': [
+        'weather_in=weather_in.cli:main'],
+        },
 )

@@ -16,6 +16,8 @@ pip install weather_in
 
 To use weather_in:
 
-weather_in City State
+weather_in City State Country
+
+(example: Pasadena California USA)
 
 *note: State should not be abbreviated*
