@@ -8,7 +8,7 @@ from weather_in import __version__, api_key
 def main():
     city = sys.argv[1]
     state = sys.argv[2]
-    if sys.argv[3]:
+    if len(sys.argv) = 3:
         country = sys.argv[3]
     else:
         country = "USA"#1
