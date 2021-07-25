@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: weather-in
-Version: 1.0.8
+Version: 1.0.9
 Summary: OpenWeather CLI script
 Home-page: https://github.com/fleetyeets/weather.in
 Author: Travis Pawlikowski
@@ -29,13 +29,13 @@ weather_in is a simple script for terminal use.  It utilizes the <a href = "http
 
 ## Installation
 
-pip install weather_in
+```pip install weather_in```
 
 ## Usage
 
 To use weather_in:
 
-weather_in City State Country
+```weather_in City State Country (country is optional; defaults to USA)```
 
 (example: Pasadena California USA)
 

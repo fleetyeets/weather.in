@@ -10,13 +10,13 @@ weather_in is a simple script for terminal use.  It utilizes the <a href = "http
 
 ## Installation
 
-pip install weather_in
+```pip install weather_in```
 
 ## Usage
 
 To use weather_in:
 
-weather_in City State Country
+```weather_in City State Country (country is optional; defaults to USA)```
 
 (example: Pasadena California USA)
 
