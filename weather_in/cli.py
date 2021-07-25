@@ -8,10 +8,7 @@ from weather_in import __version__, api_key
 def main():
     city = sys.argv[1]
     state = sys.argv[2]
-    if len(sys.argv) = 3:
-        country = sys.argv[3]
-    else:
-        country = "USA"#1
+    country = sys.argv[3] if len(sys.argv) > 3 else 'USA'#1
     url = "https://api.openweathermap.org/data/2.5/weather?q=%s,%s,%s&appid=%s&units=imperial" % (city, state, country, api_key)
     try:
         response = requests.get(url)
