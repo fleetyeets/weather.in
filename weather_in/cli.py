@@ -6,6 +6,16 @@ import weather_in
 import datetime
 from datetime import datetime
 from weather_in import __version__, api_key
+import argparse
+
+parser = argparse.ArgumentParser(description='A simple OpenWeather API wrapper.')
+parser.add_argument('city', type=str)
+parser.add_argument('state', type=str)
+parser.add_argument('country', type=str, nargs='*')
+parser.add_argument("-f", "--forecast", required=False,
+   help="Five-day forecast.", nargs='*')
+
+args = vars(parser.parse_args())
 
 
 def simple(data):
@@ -36,25 +46,24 @@ def forecast(data):
     print(*dates, sep='\n')
 
 def main():
-    city = sys.argv[1]
-    state = sys.argv[2]
-    country = sys.argv[3] if len(sys.argv) > 3 else 'USA'#1
-    query = sys.argv[4] if len(sys.argv) > 4 else 'default'
+    city = args['city']
+    state = args['state']
+    country = args['country'] if args['country'] is not None else 'USA' #1
     geourl = "https://api.openweathermap.org/data/2.5/weather?q=%s,%s,%s&appid=%s&units=imperial" % (city, state, country, api_key) #we always need this url for lat/lon, if using forecasting
     georesp = requests.get(geourl)
     geodata = json.loads(georesp.text)
     lat = geodata['coord']['lat']
     lon = geodata['coord']['lat']
-    if query == 'default':
+    if args['forecast'] is None:
         url = "https://api.openweathermap.org/data/2.5/weather?q=%s,%s,%s&appid=%s&units=imperial" % (city, state, country, api_key)
-    elif query == '-f' or '--forecast':
+    elif args['forecast'] is not None:
         url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&exclude=current,minutely,hourly,alerts&appid=%s&units=imperial" % (lat, lon, api_key)
     try:
         response = requests.get(url)
         data = json.loads(response.text)
-        if query == 'default':
+        if args['forecast'] is None:
             simple(data)
-        elif query == '-f' or '--forecast':
+        elif args['forecast'] is not None:
             forecast(data)
 
     #except KeyError:
